@@ -11,3 +11,115 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/*  Timer  */
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App{
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.timer-wrapper{
+
+}
+/*img{
+    width: 95%;
+    display: inline-block;
+}*/
+
+.timer{
+  margin: 30px auto;
+  background-color: antiquewhite;
+  box-shadow: 1px 1px 7px rgba(134, 131, 131, 255);
+}
+
+.inputs{
+  margin-bottom: 10px;
+}
+
+.inputs input, .control input{
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid #000000;
+  margin: 10px;
+  background-color: transparent;
+  font-size: 30px;
+  width: 15%;
+  user-select: none;
+}
+
+.control input{
+  width: 280px;
+}
+
+
+
+.inputs input:focus, .control input:focus{
+  outline: none;
+}
+
+.buttons button,.control button, .resetBtn button{
+  padding: 10px 15px;
+  border: none;
+  color: #ffffff;
+  margin: 10px;
+  cursor: pointer;
+  width: 70px;
+}
+
+.resetBtn button{
+  padding: 11px 15px;
+  background-color: orange!important;
+}
+
+.buttons button:hover, .buttons button[disabled]{
+  opacity: 0.7;
+}
+
+.buttons button:focus, .control button:focus{
+  outline: none;
+}
+
+.timers-quantity{
+  display: flex;
+  justify-content: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.start, .control button{
+  background-color: green;
+}
+
+.stop{
+  background-color: red;
+}
+
+.pause{
+  background-color: blue;
+}
+
+.control{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}

@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useContext} from 'react'
+import Timer from "./components/Timer";
+import Control from "./components/Control";
+import {Context} from "./context/context";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const {timers} = useContext(Context)
+
+    return (
+
+        <div className="App">
+                <Control/>
+                {
+                    timers.map((t) => {
+                        return <Timer key={t}/>
+                    })
+                }
+        </div>
+
+    )
 }
 
 export default App;
